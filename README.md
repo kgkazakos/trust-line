@@ -6,7 +6,7 @@ Input a payment feature scenario. Simulate how five user archetypes respond acro
 
 ![trust-line screenshot](public/screenshot.png)
 
-**Live demo:** [trust-line.vercel.app](https://trust-line.vercel.app)
+**Live demo:** [trust-line-theta.vercel.app](https://trust-line-theta.vercel.app/)
 
 ---
 
@@ -41,7 +41,7 @@ This output format maps directly to what a UX Engineer or designer needs to spec
 ## Stack
 
 - **Next.js 14** (App Router, TypeScript strict mode)
-- **Gemini 2.0 Flash** via `@google/genai` — server-side only, API key never touches the client bundle
+- **Gemini 3.1 Pro** via `@google/genai` — server-side only, API key never touches the client bundle
 - **Tailwind CSS** — dark navy / Google blue payments aesthetic
 - **Recharts** — Trust Line spectrum visualisation
 - Streaming responses — each archetype streams sequentially, Trust Line builds in real time
