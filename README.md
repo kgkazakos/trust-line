@@ -4,7 +4,7 @@
 
 Input a payment feature scenario. Simulate how five user archetypes respond across the Identity Control ↔ Agent Autonomy spectrum. Receive an Intervention Boundary specification and design brief your engineers can act on directly.
 
-![trust-line screenshot](public/screenshot-placeholder.png)
+![trust-line screenshot](public/screenshot.png)
 
 **Live demo:** [trust-line.vercel.app](https://trust-line.vercel.app)
 
