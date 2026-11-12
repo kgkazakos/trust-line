@@ -214,7 +214,7 @@ export default function Home() {
           <div className="inline-flex items-center gap-2 bg-[var(--surface-1)] border border-[var(--border-mid)] rounded-full px-4 py-1.5 mb-8">
             <div className="w-1.5 h-1.5 rounded-full bg-[var(--blue-google)] animate-pulse" />
             <span className="text-xs font-mono text-[var(--text-dim)]">
-              Powered by Gemini 3.1 Pro · Computational Prototyping
+              Powered by Gemini 4 Argon · Computational Prototyping
             </span>
           </div>
 

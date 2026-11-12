@@ -41,7 +41,7 @@ This output format maps directly to what a UX Engineer or designer needs to spec
 ## Stack
 
 - **Next.js 14** (App Router, TypeScript strict mode)
-- **Gemini 3.1 Pro** via `@google/genai` — server-side only, API key never touches the client bundle
+- **Gemini 4 Argon** via `@google/genai` — server-side only, API key never touches the client bundle
 - **Tailwind CSS** — dark navy / Google blue payments aesthetic
 - **Recharts** — Trust Line spectrum visualisation
 - Streaming responses — each archetype streams sequentially, Trust Line builds in real time
