@@ -1,4 +1,4 @@
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI, ThinkingLevel } from "@google/genai";
 import { NextRequest } from "next/server";
 import { ARCHETYPE_ORDER, ARCHETYPES } from "@/lib/archetypes";
 import { buildArchetypePrompt, buildDesignBriefPrompt, SYSTEM_PROMPT } from "@/lib/prompts";
@@ -19,11 +19,11 @@ async function generateArchetypeResult(
   const prompt = buildArchetypePrompt(scenario, archetypeId);
 
   const response = await ai.models.generateContent({
-    model: "gemini-3.1-pro-preview",
+    model: "gemini-4-argon",
     contents: [{ role: "user", parts: [{ text: prompt }] }],
     config: {
       systemInstruction: SYSTEM_PROMPT,
-      thinkingConfig: { thinkingBudget: 8000 },
+      thinkingConfig: { thinkingLevel: ThinkingLevel.MEDIUM },
       temperature: 0.7,
     },
   });
@@ -71,12 +71,12 @@ async function generateDesignBrief(
   const prompt = buildDesignBriefPrompt(scenario, resultsJson);
 
   const response = await ai.models.generateContent({
-    model: "gemini-3.1-pro-preview",
+    model: "gemini-4-argon",
     contents: [{ role: "user", parts: [{ text: prompt }] }],
     config: {
       systemInstruction:
         "You are a senior UX researcher writing a design brief for engineering handoff. Be precise, direct, and immediately actionable. Return plain text only.",
-      thinkingConfig: { thinkingBudget: 4000 },
+      thinkingConfig: { thinkingLevel: ThinkingLevel.LOW },
       temperature: 0.5,
     },
   });
